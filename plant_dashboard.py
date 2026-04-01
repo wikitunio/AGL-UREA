@@ -189,7 +189,7 @@ elif not df.empty:
         c5.metric("APS", f"{get_val(daily_data, 'APS'):.2f} mm", f"{get_delta('APS'):.2f} mm")
 
         # --- SECTION 2: SYNTHESIS LOOP & VESSELS ---
-        st.markdown("<h3 class='section-header'>🧪 Synthesis Loop & Major Vessels</h3>", unsafe_allow_html=True)
+        st.markdown("<h3 class='section-header'>🧪 Synthesis Loop & Recovery Section</h3>", unsafe_allow_html=True)
         
         v1, v2, v3, v4, v5 = st.columns(5)
         
@@ -295,7 +295,7 @@ elif not df.empty:
 # -- FOOTER SECTION --
 st.markdown(f"""
     <div class="footer">
-        Developed by <a href="https://www.linkedin.com/in/wikitunio" target="_blank">Waqar Ahmed Tunio</a> with Ai<br>
+        Developed by <a href="https://www.linkedin.com/in/wikitunio" target="_blank">Waqar Ahmed Tunio</a> with AI<br>
         Email: <a href="mailto:ahmed.waqar@pafl.com.pk">ahmed.waqar@pafl.com.pk</a>
     </div>
     """, unsafe_allow_html=True)
