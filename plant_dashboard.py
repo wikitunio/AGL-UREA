@@ -10,7 +10,7 @@ import base64
 import os
 
 # -- PAGE CONFIGURATION --
-st.set_page_config(page_title="AgriTech UREA Dashboard", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="AGL UREA Dashboard", layout="wide", initial_sidebar_state="expanded")
 
 # -- IMAGE ENCODER --
 @st.cache_data
