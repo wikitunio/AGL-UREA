@@ -12,17 +12,12 @@ import os
 # -- PAGE CONFIGURATION --
 st.set_page_config(page_title="AGL UREA Dashboard", layout="wide", initial_sidebar_state="expanded")
 
-# -- IMAGE ENCODER --
-@st.cache_data
-def get_base64_of_bin_file(bin_file):
-    if os.path.exists(bin_file):
-        with open(bin_file, 'rb') as f:
-            data = f.read()
-        return base64.b64encode(data).decode()
-    return ""
+# -- THE SPEED FIX: LOAD IMAGE VIA URL INSTEAD OF BASE64 --
+# Replace YOUR_GITHUB_USERNAME with your actual GitHub username (e.g., Ahmed-Waqar-Tunio)
+# Make sure your repo name is exactly urea-dashboard
+github_img_url = "https://raw.githubusercontent.com/wikitunio/experiment/main/IMG_9291.JPG"
 
-img_b64 = get_base64_of_bin_file("IMG_9291.JPG")
-bg_css = f'background-image: linear-gradient(rgba(0, 0, 50, 0.75), rgba(0, 0, 50, 0.75)), url("data:image/jpeg;base64,{img_b64}");' if img_b64 else 'background-color: #1E3A8A;'
+bg_css = f'background-image: linear-gradient(rgba(0, 0, 50, 0.75), rgba(0, 0, 50, 0.75)), url("{github_img_url}"); background-color: #1E3A8A;'
 
 # -- ULTRA-COMPACT CUSTOM CSS --
 st.markdown(f"""
